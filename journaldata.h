@@ -4,7 +4,7 @@ using namespace std;
 
 class JournalData{
 public:
-    JournalData();
+    JournalData() = default;
     JournalData(string fname, string mname, string lname,
                 string position, string degree, int influenceMade = 0);
 //    JournalData(const JournalData &data);

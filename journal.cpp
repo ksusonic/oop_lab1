@@ -1,8 +1,8 @@
 #include "journal.h"
 
-Journal::Journal(size_t size) {
-    collection = SimpleVector<JournalData>(size);
-}
+Journal::Journal(size_t size) :
+    collection(SimpleVector<JournalData>(size))
+{}
 
 //Journal::Journal(const Journal &oldJournal) :
 //    collection(oldJournal.collection) {}
