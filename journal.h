@@ -23,9 +23,6 @@ public:
     void CheckJournal() const;
     JournalData operator=(const JournalData& jd);
 
-    void SaveToFile(const string &filename);       // передаем только название файла без расширения
-    Journal LoadFromFile(const string &filename);
-
 private:
     SimpleVector<JournalData> collection;
 };

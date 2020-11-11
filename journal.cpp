@@ -50,11 +50,3 @@ void Journal::CheckJournal() const {
     }
     cout << "Все в порядке. Кофе всегда было больше 0." << endl;
 }
-
-//void Journal::SaveToFile(const string &filename) {
-//
-//}
-//
-//Journal Journal::LoadFromFile(const string &filename) {
-//    return Journal();
-//}
