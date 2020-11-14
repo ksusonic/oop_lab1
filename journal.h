@@ -1,7 +1,6 @@
 #pragma once
 #include "journaldata.h"
 #include "SimpleVector.h"
-#include "fstream"
 
 // Коллекция Одномерный массив (Вектор)
 class Journal {
@@ -19,10 +18,17 @@ public:
 
     void ClearAll();
     int Size() const;
+    JournalData operator[](std::size_t index);
+    JournalData operator[](std::size_t index) const;
+
+    void SaveToFile(const string &filename);
+    void LoadFromFile(const string &filename);
 
     void CheckJournal() const;
-    JournalData operator=(const JournalData& jd);
+    void operator=(const Journal& jd);
 
 private:
     SimpleVector<JournalData> collection;
 };
+
+ostream &operator<<(ostream &os, const Journal&J);

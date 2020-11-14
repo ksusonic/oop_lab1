@@ -1,4 +1,5 @@
 #include "journal.h"
+#include <fstream>
 
 // Раздел ТЕСТОВ:
 void TestConstructor() {
@@ -27,11 +28,11 @@ void TestChangeCoffeeAmount() {
 void TestJournal() {
     JournalData Monday("Monahov", "Ivan", "Sergeevich", "Worker", "Bachleor");
     JournalData Tuesday(Monday);
-    {
-        auto journal = Journal(3);
-        std::cout << "test11\n";
-    }
-    std::cout << "test\n";
+    Journal J;
+    J.AddData(Monday);
+    J.AddData(Tuesday);
+    J.SaveToFile("data.txt");
+
 }
 
 int main() {
