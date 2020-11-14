@@ -48,9 +48,7 @@ SimpleVector<T>::SimpleVector(const SimpleVector<T> &vector) {
 
 template <typename T>
 SimpleVector<T>::~SimpleVector() {
-    std::cout << "~SimpleVector begin\n";
     delete[] data;
-    std::cout << "~SimpleVector end\n";
 }
 
 template <typename T>
